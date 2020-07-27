@@ -1,0 +1,7 @@
+@mixin abs-center($width, $height) {
+  height: $height;
+  left: calc(50% - (#{$width} / 2));
+  position: absolute;
+  top: calc(50% - (#{$height} / 2));
+  width: $width;
+}

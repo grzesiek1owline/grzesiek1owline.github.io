@@ -1,0 +1,64 @@
+$c-primary: blue !default;
+$c-second: red !default;
+$c-alternative: pink !default;
+$c-initial: #202020;
+
+$c-text-primary: black !default;
+$c-text-second: black !default;
+$c-text-alternative: green !default;
+
+$c-heading-primary: black !default;
+$c-heading-second: white !default;
+$c-heading-alternative: green !default;
+
+$c-button-primary: black !default;
+$c-button-text-primary: white !default;
+$c-button-primary-border: black !default;
+
+$c-button-second: white !default;
+$c-button-text-second: black !default;
+$c-button-second-border: black !default;
+
+$c-button-alternative: green !default;
+$c-button-text-alternative: yellow !default;
+$c-button-alternative-border: black !default;
+
+$c-input-primary: white !default;
+$c-input-text-primary: black !default;
+$c-input-primary-border: black !default;
+
+$c-input-second: white !default;
+$c-input-text-second: black !default;
+$c-input-second-border: white !default;
+
+$c-input-alternative: green !default;
+$c-input-text-alternative: yellow !default;
+$c-input-alternative-border: green !default;
+
+$c-bg-primary: $c-primary !default;
+$c-bg-second: $c-second !default;
+$c-bg-alernative: $c-alternative !default;
+$c-bg-initial: rgb(206, 206, 206);
+
+$c-link: red;
+$c-link-hover: lighten($c-link, 20%);
+$c-link-visited:darken($c-link, 20%);
+
+$c-success: green !default;
+$c-success-border: darken(green, 10%) !default;
+$c-error: red !default;
+$c-error-border: darken(red, 10%) !default;
+$c-info: blue !default;
+$c-info-border: darken(blue, 10%) !default;
+$c-warning: yellow !default;
+$c-warning-border: darken(yellow, 10%) !default;
+$c-highlight: gold !default;
+
+$c-messages-text-light: white !default;
+$c-messages-text-dark: black !default;
+
+$c-border: gray !default;
+$c-border-focus: pink !default;
+
+$c-disabled: grey !default;
+$c-border-disabled: darken(grey, 80%) !default;

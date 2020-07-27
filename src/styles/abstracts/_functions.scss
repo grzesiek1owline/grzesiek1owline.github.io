@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+@function image($path, $base: $base-url) {
+  @return asset($base, "images/", $path);
+}
+
+@function font($path, $base: $base-url) {
+  @return asset($base, "fonts/", $path);
+}
+
+// Returns font size in REM
+@function calc-rem($target, $context: $fs-base) {
+  @return ($target / $context) * 1rem;
+}
+
+// Returns font size in REM but not add unit
+@function calc-irem($target, $context: $fs-base) {
+  @return ($target / $context);
+}
+
+@function calc-em($target, $context: $fs-base) {
+  @return ($target / $context) * 1em;
+}

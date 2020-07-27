@@ -1,0 +1,48 @@
+$sm-device: 576px !default;
+$md-device: 768px !default;
+$lg-device: 992px !default;
+$xl-device: 1200px !default;
+$xxl-device: 1600px !default;
+
+$sm-gutter: 36px !default;
+$md-gutter: 48px !default;
+$lg-gutter: 32px !default;
+$xl-gutter: 60px !default;
+$xxl-gutter: 60px !default;
+
+$sm-container-max-width: $sm-device - $sm-gutter !default;
+$md-container-max-width: $md-device - $md-gutter !default;
+$lg-container-max-width: $lg-device - $lg-gutter !default;
+$xl-container-max-width: $xl-device - $xl-gutter !default;
+$xxl-container-max-width: $xxl-device - $xxl-gutter !default;
+
+$control-gutters: (
+  xs: 15px,
+  sm: 1vw,
+  md: 2vw,
+  lg: 2vw,
+  xl: 4vw,
+  xxl: 5vw
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm-device,
+  md: $md-device,
+  lg: $lg-device,
+  xl: $xl-device,
+  xxl: $xxl-device
+) !default;
+
+$container-max-widths: (
+  sm: $sm-container-max-width,
+  md: $md-container-max-width,
+  lg: $lg-container-max-width,
+  xl: $xl-container-max-width,
+  xxl: $xxl-container-max-width
+) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.825rem !default;
+
+$layout-max-width: 100%;

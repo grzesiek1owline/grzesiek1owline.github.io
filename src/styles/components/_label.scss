@@ -1,0 +1,32 @@
+.label {
+  background-color: $c-bg-initial;
+  border-radius: $g-border-radius;
+  color: $c-initial;
+  display: inline-block;
+  line-height: inherit;
+  padding: $g-padding-y $g-padding-x;
+
+  &--primary {
+    @include color-variant($c-button-primary, $c-button-text-primary);
+  }
+
+  &--second {
+    @include color-variant($c-button-second, $c-button-text-second);
+  }
+
+  &--info {
+    @include color-variant($c-info, $c-messages-text-light);
+  }
+
+  &--error {
+    @include color-variant($c-error, $c-messages-text-light);
+  }
+
+  &--success {
+    @include color-variant($c-success, $c-messages-text-light);
+  }
+
+  &--warning {
+    @include color-variant($c-warning, $c-messages-text-dark);
+  }
+}

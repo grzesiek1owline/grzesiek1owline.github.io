@@ -1,0 +1,37 @@
+.container {
+  @include make-padding-type-container();
+  @include make-container-paddings-width();
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}
+
+.column {
+  @include make-col-ready();
+
+  &--full {
+    @include make-col(12);
+  }
+
+  &--half {
+    @include make-col(12);
+
+    @include rwdm($lg-device) {
+      @include make-col(6);
+    }
+  }
+
+  &--no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

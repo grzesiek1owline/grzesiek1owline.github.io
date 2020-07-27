@@ -1,0 +1,225 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  line-height: $text-line-height;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  color: $c-text-primary;
+  font-family: $ff-primary;
+  font-size: $fs-size;
+  text-rendering: optimizeLegibility;
+  line-height: $text-line-height;
+  font-weight: $text-font-weight;
+}
+
+a {
+  color: $c-link;
+  outline: none;
+  text-decoration: none;
+
+  &.active {
+    color: $c-link-hover;
+  }
+
+  @include on-event {
+    color: $c-link-hover;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $c-link-visited;
+  }
+}
+
+p {
+  font-family: inherit;
+  margin: 0 0 $text-baseline;
+}
+
+input,
+textarea,
+select {
+  font-family: $ff-primary;
+
+  @include placeholder {
+    font-family: $ff-primary;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-headings;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin: 0 0 $heading-baseline;
+}
+
+.jumbo {
+  @include css-lock($min-size: calc-irem($fs-jumbo * 0.7), $max-size: calc-irem($fs-jumbo), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h1,
+.alpha {
+  @include css-lock($min-size: calc-irem($fs-alpha * 0.7), $max-size: calc-irem($fs-alpha), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h2,
+.beta {
+  @include css-lock($min-size: calc-irem($fs-beta * 0.7), $max-size: calc-irem($fs-beta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h3,
+.gamma {
+  @include css-lock($min-size: calc-irem($fs-gamma * 0.7), $max-size: calc-irem($fs-gamma), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h4,
+.delta {
+  @include css-lock($min-size: calc-irem($fs-delta * 0.7), $max-size: calc-irem($fs-delta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h5,
+.epsilon {
+  @include css-lock($min-size: calc-irem($fs-epsilon * 0.7), $max-size: calc-irem($fs-epsilon), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+h6,
+.zeta {
+  @include css-lock($min-size: calc-irem($fs-zeta * 0.7), $max-size: calc-irem($fs-zeta), $min-width: 20, $max-width: 100, $property: font-size, $unit: rem);
+}
+
+// Only give these headings a margin-top if they are after other elements
+* + h1,
+* + .h1,
+* + .alpha,
+* + h2,
+* + .h2,
+* + .beta,
+* + h3,
+* + .h3,
+* + .gamma,
+* + h4,
+* + .h4,
+* + .delta {
+  margin-top: $heading-baseline;
+}
+
+// Semantic text elements
+small {
+  font-size: calc-rem($fs-xsmall);
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i,
+cite {
+  font-style: italic;
+}
+
+ins,
+u {
+  text-decoration: underline;
+  text-decoration-skip: ink edges;
+}
+
+abbr[title] {
+  border-bottom: $g-border-width dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+kbd {
+  border-radius: $g-border-radius;
+  line-height: inherit;
+  padding: $g-unit-2 $g-unit-4;
+  background: #fff;
+  color: $c-primary;
+}
+
+mark {
+  background: $c-highlight;
+  color: black;
+  padding: 0 $g-unit-layout 0;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub,
+sup {
+  font-size: 0.75rem;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+// Blockquote
+blockquote {
+  border-left: $g-border-width solid $c-border;
+  margin-left: 0;
+  padding: $g-unit-layout;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Lists
+ul {
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul,
+ol {
+  margin: $g-unit-8 0 $g-unit-8 $g-unit-8;
+  padding: 0;
+
+  ul,
+  ol {
+    margin: $g-unit-8 0 $g-unit-8 $g-unit-8;
+  }
+
+  ol {
+    list-style-type: lower-alpha;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  li {
+    margin-top: $g-unit-4;
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: $g-unit-4 0 $g-unit-8 0;
+  }
+}

@@ -1,0 +1,51 @@
+@mixin button-size($padding-y, $padding-x, $font-size: 1rem, $font-weight: inherit, $border-width: 1px) {
+  padding: calc(#{$padding-y} - #{$border-width}) $padding-x;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin button-style-normal-event-reverse($bg, $border, $color) {
+  background-color: $bg;
+  border-color: $border;
+  color: $color;
+  transition: color 200ms ease, background-color 200ms ease;
+
+  @include on-event() {
+    background-color: $color;
+    color: $bg;
+  }
+}
+
+@mixin button-style-normal-event-opacity($bg, $border, $color) {
+  background-color: $bg;
+  border-color: $border;
+  color: $color;
+  transition: background-color 200ms ease;
+
+  @include on-event() {
+    background-color: rgba($bg, 0.75);
+  }
+}
+
+@mixin button-style-outline-event-opacity($bg-color, $elements-color) {
+  background-color: $bg-color;
+  border-color: $elements-color;
+  color: $elements-color;
+  transition: background-color 200ms ease;
+
+  @include on-event() {
+    background-color: rgba($color, 0.85);
+  }
+}
+
+@mixin button-style-outline-event-reverse($bg-color, $elements-color) {
+  background-color: $bg-color;
+  border-color: $elements-color;
+  color: $elements-color;
+  transition: color 200ms ease, background-color 200ms ease;
+
+  @include on-event() {
+    background-color: $elements-color;
+    color: $bg-color;
+  }
+}

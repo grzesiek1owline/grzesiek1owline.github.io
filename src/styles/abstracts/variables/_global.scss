@@ -1,0 +1,40 @@
+// opacity
+$g-opacity-disabled: 0.75 !default;
+$g-opacity-hover: 0.85 !default;
+
+// border
+$g-border-radius: 0 !default;
+$g-border-width: 1px !default;
+$g-border-style: solid !default;
+
+// paddings
+$g-padding-y: 0.5em !default;
+$g-padding-x: 1em !default;
+
+// margins
+$g-margin-y: 0.5em !default;
+$g-margin-x: 1em !default;
+
+// sizing
+$g-gutter: 1rem !default;
+
+// shadows
+$g-box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.45) !default;
+
+// transitions
+$g-opacity-transition: opacity 200ms ease !default;
+$g-bg-transition: background-color 200ms ease !default;
+$g-color-transition: color 200ms ease !default;
+$g-transform-transition: transform 200ms ease !default;
+
+$g-unit-2: 0.2rem;
+$g-unit-4: 0.4rem;
+$g-unit-6: 0.6rem;
+$g-unit-8: 0.8rem;
+$g-unit-10: 1rem;
+$g-unit-14: 1.4rem;
+$g-unit-18: 1.8rem;
+$g-unit-22: 2.2rem;
+$g-unit-25: 2.5rem;
+
+$g-unit-layout: 1rem;

@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: $g-margin-y 0;
+  padding: $g-padding-y 0;
+
+  &__item {
+    margin: $g-unit-2 $g-unit-6;
+
+    & a {
+      border-radius: $g-border-radius;
+      display: inline-block;
+      padding: $g-padding-y/2 $g-padding-x/2;
+      text-decoration: none;
+    }
+
+    &--current {
+      & a {
+        background-color: $c-primary;
+        color: $c-text-primary;
+      }
+    }
+
+    &--disabled {
+      & a {
+        opacity: $g-opacity-disabled;
+        color: $c-disabled;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}
